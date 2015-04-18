@@ -1,1 +1,1 @@
-Тестове додавання файлу в гіт.
+Test add file into GitHub
