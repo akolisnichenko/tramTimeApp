@@ -13,6 +13,10 @@ public class TramTimeParserUtil {
 			for (String route : routeURLs){
 				String newURL = DEFAULT_URL + route;
 				List<Station> stations = RouteParser.parseStationURLs(newURL);
+				for (Station station : stations){
+					StationTime time = TimeParser.parseTimeSchedule(station.url);
+					station.timeArrays = time;
+				}
 				
 			}
 		} catch (IOException e) {
